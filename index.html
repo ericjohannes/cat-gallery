@@ -14,7 +14,7 @@
           {{#each data.data}}
             <article class="cat-info">
               <figure class="cat-photo">
-                <img src="{{url}}" alt="{{#if breeds.length }}
+                <img src="{{url}}" loading="lazy"  alt="{{#if breeds.length }}
                 Photo of a {{breeds.0.name}}
                 {{else}}
                 Photo of a cat.
