@@ -10,10 +10,30 @@
   <body>
     <div id="app">
       <h1>Here are some cats</h1>
-      <div class="cat-gallery">
-        <h2>Loading...</h2>
-      </div>
+      <main class="cat-gallery">
+        {{#if data.success}}
+          {{#each data.data}}
+            <article class="cat-info">
+              <figure class="cat-photo">
+                <img src="{{url}}" alt="{{#if breeds.length }}
+                Photo of a {{breeds.0.name}}
+                {{else}}
+                Photo of a cat.
+                {{/if}}">
+                <figcaption>{{#if breeds.length }}
+                    Photo of a {{breeds.0.name}}
+                    {{else}}
+                    Photo of a cat.
+                    {{/if}}</figcaption>
+              </figure>
+            </article>
+          {{/each}}
+        <div>here are some cats</div>
+        {{else}}
+          <div>No cat data</div>
+        {{/if}}
+      </main>
     </div>
-    <script type="module" src="/main.js"></script>
+    <!-- <script type="module" src="/main.js"></script> -->
   </body>
 </html>
