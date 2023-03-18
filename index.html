@@ -9,8 +9,9 @@
   </head> 
   <body>
       <h1>Here are some cats</h1>
-      <main class="cat-gallery">
+      
         {{#if data.success}}
+        <main class="cat-gallery">
           {{#each data.data}}
             <article class="cat-info">
               <figure class="cat-photo">
@@ -27,10 +28,16 @@
               </figure>
             </article>
           {{/each}}
+        </main>
+
+          <div class="buttons">
+            <button class="previous">Previous page</button>
+
+            <button class="next">Next page</button>
+          </div>
         {{else}}
           <div>No cat data</div>
         {{/if}}
-      </main>
     <!-- <script type="module" src="/main.js"></script> -->
   </body>
 </html>
