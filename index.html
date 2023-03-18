@@ -9,7 +9,7 @@
   </head> 
   <body>
       <h1>Here are some cats</h1>
-      
+      <div id="error"></div>
         {{#if data.success}}
         <main class="cat-gallery">
           {{#each data.data}}
@@ -31,13 +31,13 @@
         </main>
 
           <div class="buttons">
-            <button class="previous">Previous page</button>
+            <button id="previous" onClick="getData('back')">Previous page</button>
 
-            <button class="next">Next page</button>
+            <button id="next" onClick="getData('more')">Next page</button>
           </div>
         {{else}}
           <div>No cat data</div>
         {{/if}}
-    <!-- <script type="module" src="/main.js"></script> -->
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
