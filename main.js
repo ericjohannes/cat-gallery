@@ -2,11 +2,10 @@ import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
+import { apiUrl, apiKey } from './api.js';
 
 
 // https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=beng&api_key=REPLACE_ME
-const apiUrl =' https://api.thecatapi.com/v1/images/search'
-const apiKey = 'live_5P0mPUMV4pdr8rIzSdqnMDNtCvF5FYXq3YWdVFtzim6xTA0ig5QCGb9FaBNGVJ1X'
 
 const updatePage = ()=>{
   return document.querySelector('#app').innerHTML = `
