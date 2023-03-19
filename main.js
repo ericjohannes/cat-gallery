@@ -44,6 +44,8 @@ window.getData = (whichWay)=>{
     api_key: apiKey,
     page: page,
     limit: 20,
+    has_breeds: 1,
+
   }))
   .then(response=>{
     if(response.status !=200){
