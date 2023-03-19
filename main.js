@@ -9,6 +9,25 @@ const handleBreed = (breedsArray)=>{
     return 'Photo of a cat.'
   }
 }
+
+const handleBreedName = (breedsArray)=>{
+  if(breedsArray.length){
+    return `${breedsArray[0].name}`
+  }
+  else{
+    return 'A cat'
+  }
+  
+}
+const handleDescription = (breedsArray)=>{
+  if(breedsArray.length){
+    return `${breedsArray[0].description}`
+  }
+  else{
+    return 'No description provided.'
+  }
+  
+}
 const updatePage = (data)=>{
   if(window.pageCtr > 0){
     document.querySelector('#previous').style.display = "block"; 
@@ -20,10 +39,12 @@ const updatePage = (data)=>{
   let innerHTML = '';
   data.forEach(row=>{
     innerHTML += `<article class="cat-info">
+    <h2 class="breed">${handleBreedName(row.breeds)}</h2>
     <figure class="cat-photo">
       <img src="${row.url}" loading="lazy"  alt="${handleBreed(row.breeds)}">
       <figcaption>${handleBreed(row.breeds)}</figcaption>
     </figure>
+    <p>${handleDescription(row.breeds)}</p>
   </article>`
   })
   return document.querySelector('main').innerHTML = innerHTML;

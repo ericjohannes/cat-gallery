@@ -14,6 +14,11 @@
         <main class="cat-gallery">
           {{#each data.data}}
             <article class="cat-info">
+              <h2 class="breed">{{#if breeds.length }}
+                {{breeds.0.name}}
+                {{else}}
+                A cat
+                {{/if}}</h2>
               <figure class="cat-photo">
                 <img src="{{url}}" loading="lazy"  alt="{{#if breeds.length }}
                 Photo of a {{breeds.0.name}}
@@ -26,6 +31,11 @@
                     Photo of a cat.
                     {{/if}}</figcaption>
               </figure>
+              <p class="description">{{#if breeds.length }}
+                Photo of a {{breeds.0.description}}
+                {{else}}
+                Photo of a cat.
+                {{/if}}"</p>
             </article>
           {{/each}}
         </main>
