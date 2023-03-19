@@ -99,8 +99,12 @@ button:focus-visible {
   align-self: stretch;
 }
 .description{
-  padding: 10px;
+  /* padding: 10px; */
   font-family: Georgia, 'Times New Roman', Times, serif;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 .hidden{
   display: none;
