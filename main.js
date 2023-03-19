@@ -69,6 +69,7 @@ window.getData = (whichWay)=>{
     page: page,
     limit: 20,
     has_breeds: 1,
+    order: 'ASC'
 
   }))
   .then(response=>{

@@ -6,6 +6,8 @@ const queryUrl =  apiUrl + new URLSearchParams({
     api_key: apiKey,
     page: 0,
     has_breeds: 1,
+    order: 'ASC'
+
   })
 
 fetch(queryUrl)
