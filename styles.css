@@ -84,3 +84,18 @@ button:focus-visible {
   margin-left: 20px;
   margin-right: 20px;
 }
+.breed{
+  text-align: center;
+  font-size: 2em;
+}
+.cat-info{
+  border: solid gray 2px;
+  border-radius: 10px;
+  height: 100%;
+  margin: 10px;
+  align-self: flex-start;
+}
+.description{
+  padding: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}

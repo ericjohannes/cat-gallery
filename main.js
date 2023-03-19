@@ -44,7 +44,7 @@ const updatePage = (data)=>{
       <img src="${row.url}" loading="lazy"  alt="${handleBreed(row.breeds)}">
       <figcaption>${handleBreed(row.breeds)}</figcaption>
     </figure>
-    <p>${handleDescription(row.breeds)}</p>
+    <p class="description">${handleDescription(row.breeds)}</p>
   </article>`
   })
   return document.querySelector('main').innerHTML = innerHTML;
