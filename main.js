@@ -42,7 +42,7 @@ const updatePage = (data)=>{
     innerHTML += `<article class="cat-info">
     <h2 class="breed">${handleBreedName(row.breeds)}</h2>
     <figure class="cat-photo">
-      <img src="${row.url}" loading="lazy"  alt="${handleBreed(row.breeds)}">
+      <img height="${row.height}" width="${row.width}" src="${row.url}" loading="lazy"  alt="${handleBreed(row.breeds)}">
       <figcaption>${handleBreed(row.breeds)}</figcaption>
     </figure>
     <p class="description">${handleDescription(row.breeds)}</p>
@@ -77,7 +77,10 @@ window.getData = (whichWay)=>{
       return reportError()
     }
     return  response.json()
-      .then(result=>{ updatePage(result)});
+      .then(result=>{ return updatePage(result)});
+  })
+  .then(()=>{
+    window.scrollTo(0,0); // scroll to top after getting new data or if there's an error
   })
   .catch((err)=>{
     console.log(err)
