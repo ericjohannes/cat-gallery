@@ -17,4 +17,4 @@
 |-------|---------------|-------|
 | server side fetch fails | show error msg instead of gallery| Done |
 | api doesn't give data to server side | show error msg instead of gallery| Done |
-| next/prev page doesn't get data| show error msg above gallary | |
+| next/prev page doesn't get data| show error msg above gallary | Done |

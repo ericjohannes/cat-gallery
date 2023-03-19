@@ -25,7 +25,7 @@ main {
   max-width: 1280px;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
 }
 .cat-info{
@@ -101,4 +101,7 @@ button:focus-visible {
 .description{
   padding: 10px;
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.hidden{
+  display: none;
 }

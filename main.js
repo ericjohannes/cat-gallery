@@ -29,6 +29,7 @@ const handleDescription = (breedsArray)=>{
   
 }
 const updatePage = (data)=>{
+  document.querySelector('.error').classList.add('hidden');
   if(window.pageCtr > 0){
     document.querySelector('#previous').style.display = "block"; 
 
@@ -51,10 +52,12 @@ const updatePage = (data)=>{
 
 }
 const reportError = ()=>{
-  return document.querySelector('#error').innerHTML = `
+  document.querySelector('.error').classList.remove('hidden');
+  return document.querySelector('.error').innerHTML = `
   Could not retrieve more cats!
   `
 }
+
 window.pageCtr = 0;
 window.getData = (whichWay)=>{
   const ctr = whichWay == 'more' ? 1: -1;
@@ -74,6 +77,10 @@ window.getData = (whichWay)=>{
     }
     return  response.json()
       .then(result=>{ updatePage(result)});
+  })
+  .catch((err)=>{
+    console.log(err)
+    return reportError()
   })
 
 }
